@@ -1,0 +1,6 @@
+build/
+__pycache__/
+*.pyc
+# 母版与网页小样由 scripts/build.py 生成，不进仓库（图版、静帧、文档进）
+out/*.mp4
+site/clip.mp4

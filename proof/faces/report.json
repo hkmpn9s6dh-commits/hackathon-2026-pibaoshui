@@ -1,0 +1,82 @@
+[
+ {
+  "plate": "P04",
+  "who": "ye",
+  "ncc": 0.509,
+  "other": 0.204,
+  "margin": 0.305,
+  "need": 0.4,
+  "hard": false,
+  "box": [
+   340,
+   214,
+   142,
+   206
+  ],
+  "ok": true
+ },
+ {
+  "plate": "P22",
+  "who": "ye",
+  "ncc": 0.382,
+  "other": 0.494,
+  "margin": -0.112,
+  "need": 0.3,
+  "hard": true,
+  "box": [
+   214,
+   208,
+   142,
+   206
+  ],
+  "ok": true
+ },
+ {
+  "plate": "P05",
+  "who": "sun",
+  "ncc": 0.42,
+  "other": 0.28,
+  "margin": 0.14,
+  "need": 0.4,
+  "hard": false,
+  "box": [
+   358,
+   306,
+   252,
+   276
+  ],
+  "ok": true
+ },
+ {
+  "plate": "P19",
+  "who": "sun",
+  "ncc": 0.386,
+  "other": 0.374,
+  "margin": 0.012,
+  "need": 0.3,
+  "hard": true,
+  "box": [
+   278,
+   138,
+   404,
+   442
+  ],
+  "ok": true
+ },
+ {
+  "plate": "P21",
+  "who": "sun",
+  "ncc": 0.541,
+  "other": 0.377,
+  "margin": 0.164,
+  "need": 0.4,
+  "hard": false,
+  "box": [
+   322,
+   180,
+   304,
+   332
+  ],
+  "ok": true
+ }
+]

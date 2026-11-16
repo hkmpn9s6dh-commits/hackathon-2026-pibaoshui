@@ -1,0 +1,8 @@
+PASS  AC-9a P04（ye）与本角色设定图 NCC 0.51 ≥ 0.4  
+PASS  AC-9b P04 区分度：比另一角色高 +0.31 ≥ +0.05  
+PASS  AC-9a P22（ye）与本角色设定图 NCC 0.38 ≥ 0.3  hard：偏侧/暗光/同框
+PASS  AC-9a P05（sun）与本角色设定图 NCC 0.42 ≥ 0.4  
+PASS  AC-9b P05 区分度：比另一角色高 +0.14 ≥ +0.05  
+PASS  AC-9a P19（sun）与本角色设定图 NCC 0.39 ≥ 0.3  hard：偏侧/暗光/同框
+PASS  AC-9a P21（sun）与本角色设定图 NCC 0.54 ≥ 0.4  
+PASS  AC-9b P21 区分度：比另一角色高 +0.16 ≥ +0.05  

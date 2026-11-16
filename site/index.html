@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>皮包水 · 泰州一早｜AI 漫剧</title>
+<style>
+  :root{
+    --ink:#1b1a17; --ink-2:#4a463f; --ink-3:#8b8377;
+    --paper:#f3ede1; --paper-2:#faf6ec; --line:#d9cfbc;
+    --cinnabar:#b33a2b; --tea:#8a5a34;
+    --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:var(--font-serif);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.85;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(255,255,255,.55), transparent 55%),
+      radial-gradient(circle at 80% 70%, rgba(138,90,52,.06), transparent 60%),
+      repeating-linear-gradient(0deg, rgba(27,26,23,.012) 0 1px, transparent 1px 3px);
+    mix-blend-mode:multiply;
+  }
+  .wrap{position:relative; z-index:1; max-width:980px; margin:0 auto; padding:56px 24px 96px}
+  header{text-align:center; margin-bottom:40px}
+  .kicker{font-size:13px; letter-spacing:.34em; color:var(--ink-3); text-indent:.34em}
+  h1{
+    font-size:64px; margin:14px 0 6px; letter-spacing:.18em; text-indent:.18em;
+    font-weight:700; line-height:1.1;
+  }
+  .sub{font-size:14px; letter-spacing:.3em; color:var(--cinnabar); text-indent:.3em}
+  .rule{height:1px; background:var(--line); margin:34px 0}
+  .lede{font-size:19px; color:var(--ink-2); text-align:center; max-width:640px; margin:0 auto}
+  .player{
+    margin:44px auto 0; width:min(420px, 92vw); aspect-ratio:9/16;
+    background:#111; border:1px solid var(--line);
+    box-shadow:0 18px 60px rgba(27,26,23,.18);
+  }
+  video{width:100%; height:100%; display:block; background:#111}
+  .meta{
+    display:flex; justify-content:center; gap:26px; flex-wrap:wrap;
+    margin:18px 0 0; font-size:13px; color:var(--ink-3); letter-spacing:.08em;
+  }
+  h2{
+    font-size:22px; margin:56px 0 6px; letter-spacing:.14em;
+    display:flex; align-items:baseline; gap:12px;
+  }
+  h2 span{font-size:12px; color:var(--ink-3); letter-spacing:.24em}
+  p{margin:12px 0; color:var(--ink-2)}
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px}
+  .grid img{width:100%; display:block; border:1px solid var(--line); background:#fff}
+  .grid figure{margin:0}
+  .grid figcaption{font-size:12px; color:var(--ink-3); margin-top:6px; letter-spacing:.06em}
+  table{width:100%; border-collapse:collapse; margin-top:16px; font-size:14px}
+  th,td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{color:var(--ink-3); font-weight:400; letter-spacing:.1em; font-size:12px}
+  td code{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:12.5px; color:var(--tea)}
+  .seal{
+    display:inline-block; background:var(--cinnabar); color:#fff8ef;
+    padding:10px 10px; font-size:15px; letter-spacing:.18em; text-indent:.18em;
+    writing-mode:vertical-rl; margin-top:8px;
+  }
+  blockquote{
+    margin:24px 0; padding:14px 20px; border-left:2px solid var(--cinnabar);
+    color:var(--ink-2); background:rgba(255,255,255,.35);
+  }
+  footer{margin-top:72px; text-align:center; color:var(--ink-3); font-size:12.5px; letter-spacing:.1em}
+  a{color:var(--tea)}
+  @media (max-width:640px){
+    h1{font-size:44px}
+    .wrap{padding:36px 18px 64px}
+    .grid{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">泰州首届 AI 漫剧创作大赛 · 社会组</div>
+  <h1>皮包水</h1>
+  <div class="sub">泰州 · 海陵 · 一早</div>
+</header>
+
+<div class="rule"></div>
+
+<p class="lede">孙女要卖掉爷爷开了四十年的早茶店。<br>爷爷不拦，只让她在最后一个早晨，陪他把一碟干丝烫三遍。</p>
+
+<div class="player">
+  <video src="clip.mp4" poster="cover.jpg" controls playsinline preload="metadata"></video>
+</div>
+<div class="meta">
+  <span>3 分 52 秒</span><span>1080 × 1920</span><span>水墨淡彩 · 四色</span><span>全片无实拍</span>
+</div>
+
+<h2>这一碟干丝 <span>THE DISH</span></h2>
+<p>泰州人说「早上皮包水」——早上喝茶。一套早茶叫「一茶三点一面」，头一样不是包子，是一碟<b>烫干丝</b>：一块豆腐干片成二十多层薄片，再切成细丝，沸水反复三烫，去豆腥、留柔韧，淋虾籽酱油与小磨麻油，撒姜丝、虾米。</p>
+<blockquote>一烫去豆腥，二烫定形，三烫回热。少一烫，就是凉菜。</blockquote>
+<p>这句话是片子里爷爷的口诀。<b>三烫</b>有据（泰州烫干丝「沸水反复三烫」见诸公开报道），三个步骤的名字是这个人自己叫的。</p>
+
+<div class="grid">
+  <figure><img src="img/f1.jpg" alt=""><figcaption>04:20　案板上的合同，没人看它</figcaption></figure>
+  <figure><img src="img/f2.jpg" alt=""><figcaption>05:00　烫干丝：滚水冲进白瓷碗</figcaption></figure>
+  <figure><img src="img/f3.jpg" alt=""><figcaption>05:20　第一碟：姜丝、虾米、麻油</figcaption></figure>
+  <figure><img src="img/f4.jpg" alt=""><figcaption>05:55　3 号桌旁多摆了一副碗筷</figcaption></figure>
+  <figure><img src="img/f5.jpg" alt=""><figcaption>06:20　鱼要捣碎，汤才白</figcaption></figure>
+  <figure><img src="img/f6.jpg" alt=""><figcaption>07:00　围裙解下来，系在她身上</figcaption></figure>
+</div>
+
+<h2>怎么做的 <span>METHOD</span></h2>
+<p>27 张画，一张一张生成；30 句台词，一句一句合成。每一步都在仓库里可复现——改片子只改一个文件（<code>story.py</code>：图版提示词 + 30 个镜头 + 30 条台词 + 音效表），然后重跑三条命令。</p>
+<table>
+  <tr><th>层</th><th>做法</th></tr>
+  <tr><td>画面</td><td>文生图 + <b>图生图</b>：每张含人物的画都以人物设定图当参考图，双人镜头同时喂两张。水墨淡彩、四色板、宣纸底。</td></tr>
+  <tr><td>人物一致</td><td>三层：图生图锁定脸；服装记号每次点名（爷爷的灰毛巾、孙女的红围巾）；后期统一色链。验收见下。</td></tr>
+  <tr><td>声音</td><td>edge-tts 四条声线；水沸、油煎、切菜、冲水、门轴、街声全部 numpy 程序合成；箫也是程序合成的，D 小调五声，16 个音。</td></tr>
+  <tr><td>镜头</td><td>逐帧仿射取样，只做推拉与竖向微移；五处幕间淡黑；拟声字只给两处（嗤、哗）。</td></tr>
+  <tr><td>字幕</td><td>程序排版烧字幕，字体随片（思源宋体子集 122 KB、马善政楷书子集 95 KB）。</td></tr>
+</table>
+
+<h2>人物一致怎么验 <span>CONSISTENCY</span></h2>
+<p>官方规格里写着「人物形象前后一致」。所以这条不是靠眼看：每个含人脸的镜头，都拿人物设定图做一次<b>带椭圆掩码的归一化互相关</b>（只比头部，背景不参与打分），阈值 0.40；偏侧、暗光、双人同框的镜头放一档到 0.30，并留一张人工复核的证据条。</p>
+<div class="grid">
+  <figure><img src="img/faces.png" alt="人脸证据条"><figcaption>左二为两张人物设定图，其余为片中各镜头自动定位裁出的同一张脸</figcaption></figure>
+</div>
+
+<h2>工程 <span>REPO</span></h2>
+<p><code>bash verify.sh</code> 一条命令验 12 组条件：时长 / 画幅 / 编码 / 码率与体积 / 音轨 48k 立体声 / 响度与真峰 / 字幕条数与不重叠与停留时长 / 配音不超槽 / 分镜与成片对齐 / 取样窗不进工具水印 / 字体缺字为 0 / 人物 NCC。退出码即结论。</p>
+
+<footer>
+  本片画面、配音、音乐均由生成式 AI 与程序合成；全片无实拍素材。<br>
+  泰州风物的出处见仓库 <code>docs/01-STORY.md</code>。
+  <div class="seal">海陵</div>
+</footer>
+
+</div>
+</body>
+</html>
