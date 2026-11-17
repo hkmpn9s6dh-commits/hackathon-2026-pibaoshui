@@ -1,8 +1,8 @@
 PASS  AC-0 成片存在  
-PASS  AC-1 时长 1–5 分钟  232.00s
+PASS  AC-1 时长 1–5 分钟  232.08s
 PASS  AC-2 竖屏 1080×1920  1080×1920
 PASS  AC-3 H.264 / yuv420p  h264 / yuv420p
-PASS  AC-4 文件 ≤ 2GB  429.8 MB
+PASS  AC-4 文件 ≤ 2GB  429.1 MB
 PASS  AC-5 有音轨  1 条
 PASS  AC-5b 48kHz 立体声  48000Hz / 2ch
 PASS  AC-5c 响度 −20…−12 LUFS  -17.0 LUFS

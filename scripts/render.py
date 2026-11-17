@@ -232,8 +232,8 @@ def shot_frame(shot, local_t, frame_i):
         # 一条极淡的横线，压在片名下方
         d.line([(W * 0.22, H * 0.585), (W * 0.78, H * 0.585)], fill=(190, 180, 165), width=2)
         # 朱印（右下，一方小红块 + 白文）
-        s = 84
-        x0, y0 = int(W * 0.615), int(H * 0.578)
+        s = 118
+        x0, y0 = int(W * 0.588), int(H * 0.601)
         d.rectangle([x0, y0, x0 + s, y0 + s], fill=CINNABAR)
         seal = text_layer("海陵", int(s * 0.34), "serif", (255, 250, 244))
         base.paste(seal, (x0 + (s - seal.width) // 2, y0 + (s - seal.height) // 2), seal)
