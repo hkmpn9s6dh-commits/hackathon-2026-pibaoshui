@@ -56,6 +56,7 @@
   .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px}
   .grid img{width:100%; display:block; border:1px solid var(--line); background:#fff}
   .grid figure{margin:0}
+  .grid .wide{grid-column:1 / -1}
   .grid figcaption{font-size:12px; color:var(--ink-3); margin-top:6px; letter-spacing:.06em}
   table{width:100%; border-collapse:collapse; margin-top:16px; font-size:14px}
   th,td{text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
@@ -127,7 +128,7 @@
 <h2>人物一致怎么验 <span>CONSISTENCY</span></h2>
 <p>官方规格里写着「人物形象前后一致」。所以这条不是靠眼看：每个含人脸的镜头，都拿人物设定图做一次<b>带椭圆掩码的归一化互相关</b>（只比头部，背景不参与打分），阈值 0.40；偏侧、暗光、双人同框的镜头放一档到 0.30，并留一张人工复核的证据条。</p>
 <div class="grid">
-  <figure><img src="img/faces.png" alt="人脸证据条"><figcaption>左二为两张人物设定图，其余为片中各镜头自动定位裁出的同一张脸</figcaption></figure>
+  <figure class="wide"><img src="img/faces.png" alt="人脸证据条"><figcaption>左二为两张人物设定图，其余为片中各镜头自动定位裁出的同一张脸</figcaption></figure>
 </div>
 
 <h2>工程 <span>REPO</span></h2>
