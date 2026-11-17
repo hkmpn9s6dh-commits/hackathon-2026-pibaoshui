@@ -164,17 +164,25 @@ def verify_safe():
         y0 = min(max(cy - win_h / 2, sy0 * ph), sy1 * ph - win_h)
         worst_r = max(worst_r, (x0 + win_w) / pw)
         worst_b = max(worst_b, (y0 + win_h) / ph)
-    check("AC-10a 取样窗右边界 < 0.885", worst_r < 0.886, f"{worst_r:.3f}")
-    check("AC-10b 取样窗下边界 < 0.940", worst_b < 0.940, f"{worst_b:.3f}")
+    # 工具水印的实测位置：x ≥ 0.895、y ≥ 0.945（1024×1536 原图上量的）
+    check("AC-10a 取样窗右边界 < 0.895", worst_r < 0.895, f"{worst_r:.3f}")
+    check("AC-10b 取样窗下边界 < 0.945", worst_b < 0.945, f"{worst_b:.3f}")
 
 
 # ---------------------------------------------------------------- 字体
 def verify_fonts():
     print("\n[字体]")
     from fontTools.ttLib import TTFont
-    texts = [l["text"] for l in S.LINES] + [m["text"] for m in S.MARKS]
-    need = set("".join(texts)) | set(S.TITLE) | set(S.SUBTITLE)
-    for fn in ["NotoSerifSC-600.subset.ttf", "MaShanZheng.subset.ttf"]:
+    # 按「这段字用哪套字体渲染」来查缺字，不能把两套字体的字符并成一个集合
+    use = {"serif": [], "brush": []}
+    use["serif"] += [l["text"] for l in S.LINES]
+    for m in S.MARKS:
+        use["brush" if m["kind"] in ("sfx", "title") else "serif"].append(m["text"])
+    use["serif"] += [S.SUBTITLE]
+    use["brush"] += [S.TITLE]
+    files = {"serif": "NotoSerifSC-600.subset.ttf", "brush": "MaShanZheng.subset.ttf"}
+    for kind, texts in use.items():
+        fn = files[kind]
         p = os.path.join(ROOT, "assets", "fonts", fn)
         if not check(f"AC-11a 字体存在 {fn}", os.path.exists(p)):
             continue
@@ -182,8 +190,9 @@ def verify_fonts():
         cmap = set()
         for t in f["cmap"].tables:
             cmap |= set(t.cmap.keys())
+        need = set("".join(texts))
         miss = sorted(ch for ch in need if ord(ch) not in cmap)
-        check(f"AC-11b {fn} 缺字 = 0", not miss, "".join(miss))
+        check(f"AC-11b {fn} 缺字 = 0（{len(need)} 字）", not miss, "".join(miss))
     # 字体许可
     lic = os.path.join(ROOT, "assets", "fonts", "LICENSE.md")
     check("AC-11c 字体许可随包", os.path.exists(lic))

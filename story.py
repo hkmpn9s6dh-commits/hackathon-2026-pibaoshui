@@ -175,8 +175,8 @@ SHOTS = [
     dict(id="S25", plate="P23", dur=8.0, cam="still", z=1.04, cy=0.44),
     dict(id="S26", plate="P24", dur=8.0, cam="push_in", z=1.07, cy=0.50),
     dict(id="S27", plate="P25", dur=9.0, cam="push_in", z=1.08, cy=0.46),
-    dict(id="S28", plate="P26", dur=9.0, cam="push_in", z=1.08, cy=0.48),
-    dict(id="S29", plate="P27", dur=8.0, cam="still", z=1.04, cy=0.50),
+    dict(id="S28", plate="P26", dur=12.0, cam="push_in", z=1.10, cy=0.48),
+    dict(id="S29", plate="P27", dur=5.0, cam="still", z=1.05, cy=0.50),
     dict(id="S30", plate=None, dur=12.0, cam="still", z=1.0, cy=0.5),
 ]
 

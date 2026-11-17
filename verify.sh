@@ -8,7 +8,7 @@ command -v py >/dev/null 2>&1 || PY=python3
 
 echo "== 0. 依赖 =="
 $PY - <<'EOF'
-import importlib, sys
+import importlib.util, sys
 need = ["numpy", "PIL", "fontTools", "edge_tts", "brotli"]
 miss = [m for m in need if importlib.util.find_spec(m) is None]
 if miss:

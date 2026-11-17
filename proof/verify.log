@@ -1,6 +1,34 @@
+PASS  AC-0 成片存在  
+PASS  AC-1 时长 1–5 分钟  232.00s
+PASS  AC-2 竖屏 1080×1920  1080×1920
+PASS  AC-3 H.264 / yuv420p  h264 / yuv420p
+PASS  AC-4 文件 ≤ 2GB  429.8 MB
+PASS  AC-5 有音轨  1 条
+PASS  AC-5b 48kHz 立体声  48000Hz / 2ch
+PASS  AC-5c 响度 −20…−12 LUFS  -17.0 LUFS
+PASS  AC-5d 真峰 ≤ −1 dBFS  -1.5 dBFS
+PASS  AC-6a 字幕条数 ≥ 20  30 条
+PASS  AC-6b 字幕不重叠  []
+PASS  AC-7a 每条停留 ≥ 1.2s  []
+PASS  AC-6c 全部落在成片时间轴内  []
+PASS  AC-7b 配音不超字幕槽 +0.4s  []
+PASS  AC-7c 配音条数 = 字幕条数  30 / 30
+PASS  AC-6d 字幕区有白字像素  高亮像素占比 2.64%
+PASS  AC-8a 镜头起点连续  最大偏差 0.00e+00s
+PASS  AC-8b 镜头时长和 = 全片  232.00s / 232.00s
+PASS  AC-8c 每个镜头都有图版  []
+PASS  AC-8d 没有闲图版  []
+PASS  AC-8e 每镜头 ≥ 3s  最短 5.0s
+PASS  AC-10a 取样窗右边界 < 0.895  0.830
+PASS  AC-10b 取样窗下边界 < 0.945  0.940
+PASS  AC-11a 字体存在 NotoSerifSC-600.subset.ttf  
+PASS  AC-11b NotoSerifSC-600.subset.ttf 缺字 = 0（123 字）  
+PASS  AC-11a 字体存在 MaShanZheng.subset.ttf  
+PASS  AC-11b MaShanZheng.subset.ttf 缺字 = 0（5 字）  
+PASS  AC-11c 字体许可随包  
 PASS  AC-9a P04（ye）与本角色设定图 NCC 0.51 ≥ 0.4  
 PASS  AC-9b P04 区分度：比另一角色高 +0.31 ≥ +0.05  
-PASS  AC-9a P22（ye）与本角色设定图 NCC 0.38 ≥ 0.3  hard：偏侧/暗光/同框
+PASS  AC-9a P22（ye）与本角色设定图 NCC 0.42 ≥ 0.3  hard：偏侧/暗光/同框
 PASS  AC-9a P05（sun）与本角色设定图 NCC 0.42 ≥ 0.4  
 PASS  AC-9b P05 区分度：比另一角色高 +0.14 ≥ +0.05  
 PASS  AC-9a P19（sun）与本角色设定图 NCC 0.39 ≥ 0.3  hard：偏侧/暗光/同框

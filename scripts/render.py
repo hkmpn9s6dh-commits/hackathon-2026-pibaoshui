@@ -86,7 +86,7 @@ _r = np.sqrt(((_xx - W / 2) / (W * 0.62)) ** 2 + ((_yy - H / 2) / (H * 0.62)) **
 VIG = (1.0 - 0.16 * np.clip(_r, 0, 1) ** 2.2).astype(np.float32)[..., None]
 
 
-def post(im, frame_i, grain=0.055):
+def post(im, frame_i, grain=0.024):
     a = np.asarray(im.convert("RGB"), np.float32)
     g = GRAIN[frame_i % 64:frame_i % 64 + H, frame_i * 7 % 64:frame_i * 7 % 64 + W]
     a += (g * grain * 255.0)[..., None]
@@ -151,7 +151,7 @@ def sample(shot, p):
     sx = ww / W
     sy = wh / H
     return src.transform((W, H), Image.AFFINE, (sx, 0, x0, 0, sy, y0),
-                         resample=Image.BICUBIC)
+                         resample=Image.BILINEAR)
 
 
 # ---------------------------------------------------------------- 文字层
@@ -244,10 +244,12 @@ def shot_frame(shot, local_t, frame_i):
 
 # ---------------------------------------------------------------- 主循环
 def render(out_path):
+    # 先写 .part，收尾成功才改名：中途被打断不会留下一个「看着像 MP4」的坏文件
+    tmp_path = out_path[:-4] + ".part.mp4" if out_path.endswith(".mp4") else out_path + ".part.mp4"
     cmd = ["ffmpeg", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24",
            "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-           "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
-           "-pix_fmt", "yuv420p", "-movflags", "+faststart", out_path]
+           "-an", "-c:v", "libx264", "-preset", "medium", "-crf", "23",
+           "-pix_fmt", "yuv420p", "-movflags", "+faststart", tmp_path]
     proc = subprocess.Popen(cmd, stdin=subprocess.PIPE,
                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     i = 0
@@ -302,7 +304,10 @@ def render(out_path):
             if i % 240 == 0:
                 print(f"  {i}/{total} frames  ({i/total*100:.0f}%)", flush=True)
     proc.stdin.close()
-    proc.wait()
+    rc = proc.wait()
+    if rc != 0:
+        raise SystemExit(f"ffmpeg 退出码 {rc}，保留 {tmp_path} 供排查")
+    os.replace(tmp_path, out_path)
     return i
 
 

@@ -44,8 +44,8 @@ def main():
          "-movflags", "+faststart", web])
     print("web:", web, f"{os.path.getsize(web)/1024/1024:.1f} MB")
 
-    # 封面：取 0:55 那一帧（干丝）与 3:46（片名卡）
-    for t, name in [(55.0, "cover.jpg"), (226.0, "endcard.jpg")]:
+    # 封面：取 0:30（她推门，两位盲读评委都选它当封面）与 3:46（片名卡）
+    for t, name in [(30.0, "cover.jpg"), (226.0, "endcard.jpg")]:
         run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", master,
              "-frames:v", "1", "-q:v", "2", os.path.join(ROOT, "site", name)])
 
